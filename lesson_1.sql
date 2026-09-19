@@ -31,3 +31,23 @@ SELECT name, age FROM Company WHERE age > 18;
 
 DROP TABLE Company;
 DROP TABLE Trip;
+--дз--
+CREATE TABLE procuts (
+	id INT(20),
+  	name VARCHAR(20),
+  	price INT(20),
+  	category VARCHAR(20)
+);
+
+INSERT INTO procuts VALUES (1, 'Пылесос', 3000, 'Электроника');
+INSERT INTO procuts VALUES (2, 'Чайник', 2000, 'Электроника');
+INSERT INTO procuts VALUES (3, 'Стол', 5000, 'Мебель');
+INSERT INTO procuts VALUES (4, 'Вентилятор', 899, 'Электроника');
+INSERT INTO procuts VALUES (5, 'Чайный сервиз', 1000, 'Посуда');
+
+SELECT name FROM procuts where price > 1000;
+SELECT * FROM procuts WHERE category  LIKE 'Э%';
+SELECT * FROM procuts LIMIT 3;
+SELECT DISTINCT category FROM procuts;
+
+DROP TABLE procuts;
