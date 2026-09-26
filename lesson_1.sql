@@ -39,15 +39,26 @@ CREATE TABLE procuts (
   	category VARCHAR(20)
 );
 
-INSERT INTO procuts VALUES (1, 'Пылесос', 3000, 'Электроника');
-INSERT INTO procuts VALUES (2, 'Чайник', 2000, 'Электроника');
-INSERT INTO procuts VALUES (3, 'Стол', 5000, 'Мебель');
-INSERT INTO procuts VALUES (4, 'Вентилятор', 899, 'Электроника');
-INSERT INTO procuts VALUES (5, 'Чайный сервиз', 1000, 'Посуда');
+INSERT INTO procuts VALUES (1, 'Шорты', 2000, 'Одежда');
+INSERT INTO procuts VALUES (2, 'Кофта', 3500, 'Одежда');
+INSERT INTO procuts VALUES (3, 'Куртка', 5500, 'Одежда');
+INSERT INTO procuts VALUES (4, 'NOKIA', 1500, 'Телефон');
+INSERT INTO procuts VALUES (5, 'iphone', 10000, 'Телефон');
+INSERT INTO procuts VALUES (6, 'POCO', 7500, 'Телефон');
+INSERT INTO procuts VALUES (7, 'TIME', 750, 'Журнал');
+INSERT INTO procuts VALUES (8, 'Fordes', 900, 'Журнал');
+INSERT INTO procuts VALUES (9, 'Cosmopolitan', 1000, 'Журнал');
+INSERT INTO procuts VALUES (10, 'Harry Potter', 2500, 'Книги');
+INSERT INTO procuts VALUES (11, 'Лестерский кодекс', 15000, 'Книги');
+INSERT INTO procuts VALUES (12, 'Великая хартия вольностей', 20000, 'Книги');
 
-SELECT name FROM procuts where price > 1000;
+
+SELECT name FROM procuts;
+SELECT name, price FROM procuts;
+SELECT name, category FROM procuts;
+SELECT name FROM procuts where price > 5000;
 SELECT * FROM procuts WHERE category  LIKE 'Э%';
-SELECT * FROM procuts LIMIT 3;
+SELECT * FROM procuts LIMIT 5;
 SELECT DISTINCT category FROM procuts;
 
 DROP TABLE procuts;
